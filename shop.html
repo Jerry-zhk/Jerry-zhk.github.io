@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>E shop</title>
+  <script>
+
+
+    function pay() {
+      var x = window.open('http://localhost:3000');
+      x.window.focus();
+      x.window.paid = function () {
+        console.log('Paid!!');
+      }
+      x.window.onclose = function() {
+        console.log('closed')
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <button onclick="pay()">Pay</button>
+</body>
+
+</html>
